@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    font-family: Ubuntu, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================
+    Typoghraphy 
+=========================== */
+
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #707070;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em; 
+    padding: 0.25em 0;
+}
+
+h1, h2, h3 {
+    font-family: Lora, serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.widget-title {
+    text-transform: uppercase;
+    letter-spacing: 0.06em; 
+    color: black;
+    font-weight: 700;
+}
+
+p {
+    color: #707070;
+}
+
+strong{
+    color: black;
+}
+
+footer p, footer strong {
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* h1 subtitle */ 
+.subtitle, .article-read-more{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: #1792D2;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.about-me-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: #1792D2;
+}
+
+.article-body {
+    margin-top: 0;
+}
+
+.article-read-more, .article-info {
+    font-size: 0.875rem;
+}
+
+.article-read-more {
+    text-decoration: none;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+
+.article-link {
+    color:#1792D2;
+}
+
+.article-link:hover,
+.article-link:focus {
+    color:#143774;
+}
+
+.article-info {
+    margin: 2em 0;
+}
+
+/* ==========================
+    Layout
+=========================== */
+
+.container {
+    width: 90%; 
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f1f1f193;
+    padding: 2em 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 3em;
+}
+
+.image-full {
+    margin-bottom: 1.5em;
+    width: 100%;
+    display: block;
+}
+
+.container-me {
+    margin-bottom: 2.5em;
+}
+
+/* navigation */
+
+nav ul {
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+nav li {
+    list-style-type: none;
+    margin-left: 2em;
+    margin: 1em;
+}
+
+
+nav a:hover,
+nav a:focus {
+    color: #1792D2;
+}
+
+.current-page {
+    border-bottom: 1px solid#707070; 
+}
+
+.current-page:hover {
+    color:#707070;
+}
+
+
+footer {
+    height: 10%;
+    background-color:#143774;
+    text-align: center;
+    padding: 2em;
+}
+
+/* articles */
+.article-featured {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.article-image {
+    order: -2;
+}
+
+.article-info{
+    order: -1;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+/* widgets */
+
+.sidebar-widget {
+    border: 10px solid rgb(240, 240, 240);
+    padding: 0.5em;
+    margin-bottom: 2em;
+}
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1.2em;
+}
+
+.widget-recent-post:nth-of-type(3) {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.widget-post-title {
+    order: 2;
+    margin-bottom: 1em;
+}
+
+.widget-image {
+    margin-bottom: 0.5em;
+}
+
+/* desktop */
+
+
+@media (min-width: 675px) {
+    .container-flex {
+        flex-direction: row;
+    }
+
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-recent-main {
+        width: 67%;
+    }
+
+    .article-recent-secondary {
+        width: 30%;
+    }
+
+    .article-recent .article-image {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 15%;
+        margin-top: 0.2em;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        width: 70%;
+    }
+    
+    aside {
+        width: 25%;
+        min-width: 160px;
+    }
+
+    .widget-title {
+        font-size: 1rem;
+    }
+
+    .widget-post-title {
+        font-size: 1.2rem;
+    }
+
+}
